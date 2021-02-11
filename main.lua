@@ -1,30 +1,3 @@
---[[
-    GD50 2018
-    Pong Remake
-
-    pong-2
-    "The Rectangle Update"
-
-    -- Main Program --
-
-    Author: Colton Ogden
-    cogden@cs50.harvard.edu
-
-    Originally programmed by Atari in 1972. Features two
-    paddles, controlled by players, with the goal of getting
-    the ball past your opponent's edge. First to 10 points wins.
-
-    This version is built to more closely resemble the NES than
-    the original Pong machines or the Atari 2600 in terms of
-    resolution, though in widescreen (16:9) so it looks nicer on 
-    modern systems.
-]]
-
--- push is a library that will allow us to draw our game at a virtual
--- resolution, instead of however large our window is; used to provide
--- a more retro aesthetic
---
--- https://github.com/Ulydev/push
 push = require 'push'
 
 Class = require 'class'
@@ -229,7 +202,7 @@ function love.draw()
     love.graphics.setFont(smallFont)
     if gameState == 'start' then
 	    love.graphics.printf('Pong!', 0, 20, VIRTUAL_WIDTH, 'center')
-	    love.graphics.printf('Press Enter <_| to start!', 0, 30, VIRTUAL_WIDTH, 'center')
+	    love.graphics.printf('Press Enter to start!', 0, 30, VIRTUAL_WIDTH, 'center')
 		
 	elseif gameState == 'play' then
 		love.graphics.printf('Play pong!', 0, 20, VIRTUAL_WIDTH, 'center')
@@ -262,7 +235,7 @@ function  displayFPS()
 	-- love.graphics.print('Player 1: ' .. tostring(player1Score),10,20 )
 	-- love.graphics.print('Player 2: ' .. tostring(player2Score), VIRTUAL_WIDTH-45, 20)
 	love.graphics.setFont(smallFont)
-	love.graphics.printf('***Madhu\'s Game***',0,10,VIRTUAL_WIDTH,'center')
+	love.graphics.printf('***Deepak Lakhera\'s Productions***',0,10,VIRTUAL_WIDTH,'center')
 	love.graphics.setFont(smallFont)
 	love.graphics.print('FPS: ' .. tostring(love.timer.getFPS()),10,10)
 	-- body
